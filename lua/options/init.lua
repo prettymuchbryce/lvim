@@ -11,7 +11,7 @@ lvim.colorscheme = "onedarker"
 lvim.leader = "space"
 
 -- Keymap timeout
-vim.opt.timeoutlen = 500
+vim.opt.timeoutlen = 100
 
 -- Relative row numbers
 vim.opt.relativenumber = true
@@ -22,3 +22,6 @@ lvim.debug = false
 -- Enable Dashboard and Terminal
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
+
+-- Specify languages allowed in markdown code blocks
+vim.g.markdown_fenced_languages = {"javascript", "rust", "typescript", "sh", "go"}

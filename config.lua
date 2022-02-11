@@ -15,3 +15,6 @@ require "commands"
 
 -- LSP
 require "lsp"
+
+-- Custom Note-taking behavior
+require "notes"

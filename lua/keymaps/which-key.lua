@@ -7,3 +7,10 @@ lvim.builtin.which_key.mappings["t"] = {
   b = { "<cmd>split term://zsh<cr>", "Terminal to below" },
   r = { "<cmd>vsplit term://zsh<cr>", "Terminal to right" },
 }
+
+-- Which-key: +Notes
+lvim.builtin.which_key.mappings["N"] = {
+  name = "+Notes",
+  n = { "<cmd>NewNote<cr>", "Create a new note" },
+  o = { "<cmd>OpenNotes<cr>", "Open notes" },
+}
