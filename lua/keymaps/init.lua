@@ -17,6 +17,12 @@ lvim.keys.normal_mode["<C-w>;"] = "<C-w>l"
 lvim.keys.normal_mode["<C-l>"] = ":bprevious<CR>"
 lvim.keys.normal_mode["<C-k>"] = ":bnext<CR>"
 
+-- These don't work for some reason. Shifting text in visual mode.
+-- lvim.keys.visual_mode["<shift-j>"] = "<shift-h>"
+-- lvim.keys.visual_mode["<shift-k>"] = "<shift-j>"
+-- lvim.keys.visual_mode["<shift-l>"] = "<shift-k>"
+-- lvim.keys.visual_mode["<shift-;>"] = "<shift-l>"
+
 -- Close buffer
 lvim.keys.normal_mode["<C-x>"] = ":bp|bd #<CR>"
 

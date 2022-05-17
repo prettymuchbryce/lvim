@@ -20,7 +20,7 @@ vim.opt.relativenumber = true
 lvim.debug = false
 
 -- Enable Dashboard and Terminal
-lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 
 -- Specify languages allowed in markdown code blocks

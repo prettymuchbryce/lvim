@@ -1,6 +1,4 @@
-local other = require("plugins.gitlinker-other")
-
-local Gitlinker = {}
+local Gitlinker = {};
 
 Gitlinker.config = function()
   require("gitlinker").setup {
@@ -14,11 +12,7 @@ Gitlinker.config = function()
       print_url = false,
     },
     callbacks = {
-      ["github.com"] = require("gitlinker.hosts").get_github_type_url,
-      [other.key] = function(url_data)
-        url_data.host = "github.com"
-        return require("gitlinker.hosts").get_github_type_url(url_data)
-      end
+      ["github.com"] = require("gitlinker.hosts").get_github_type_url
     },
     -- default mapping to call url generation with action_callback
     mappings = "<leader>gy",

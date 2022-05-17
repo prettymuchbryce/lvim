@@ -48,7 +48,9 @@ lvim.plugins = {
       require("rust-tools").setup({})
     end,
   },
-
+  {
+    "fatih/vim-go",
+  },
   --
   -- Git
   --
@@ -69,4 +71,7 @@ lvim.plugins = {
       require("themes.tokyonight").config()
     end,
   },
+  {
+    "jghauser/follow-md-links.nvim"
+  }
 }
