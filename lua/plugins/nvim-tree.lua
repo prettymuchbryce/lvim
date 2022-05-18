@@ -10,6 +10,7 @@ NvimTree.config = function()
   lvim.builtin.nvimtree.setup.view.width = 40
   lvim.builtin.nvimtree.setup.view.auto_resize = true
   lvim.builtin.nvimtree.setup.git.ignore = false
+  lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
 end
 
 return NvimTree
