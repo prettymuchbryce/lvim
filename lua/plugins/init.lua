@@ -21,6 +21,12 @@ lvim.plugins = {
   --
 
   --
+  -- Plugin Development
+  --
+  {
+    "MunifTanjim/nui.nvim"
+  },
+  --
   -- Diagnostics
   --
   {
@@ -50,6 +56,9 @@ lvim.plugins = {
   },
   {
     "fatih/vim-go",
+  },
+  {
+    "hashivim/vim-terraform",
   },
   --
   -- Git

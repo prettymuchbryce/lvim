@@ -24,4 +24,4 @@ lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 
 -- Specify languages allowed in markdown code blocks
-vim.g.markdown_fenced_languages = {"javascript", "rust", "typescript", "sh", "go"}
+vim.g.markdown_fenced_languages = { "javascript", "rust", "typescript", "sh", "go" }
