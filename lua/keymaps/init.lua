@@ -16,6 +16,7 @@ lvim.keys.normal_mode["<C-w>l"] = "<C-w>k"
 lvim.keys.normal_mode["<C-w>;"] = "<C-w>l"
 lvim.keys.normal_mode["<C-l>"] = ":bprevious<CR>"
 lvim.keys.normal_mode["<C-k>"] = ":bnext<CR>"
+vim.keymap.set("i", "kj", "<ESC>", { silent = true })
 
 -- These don't work for some reason. Shifting text in visual mode.
 -- lvim.keys.visual_mode["<shift-j>"] = "<shift-h>"
