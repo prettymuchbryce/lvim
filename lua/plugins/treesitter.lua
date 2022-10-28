@@ -16,6 +16,7 @@ Treesitter.config = function()
     "go",
     "lua",
     "yaml",
+    "make",
   }
   lvim.builtin.treesitter.ignore_install = {
     "haskell",

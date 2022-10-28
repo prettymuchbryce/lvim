@@ -21,4 +21,5 @@ lvim.builtin.which_key.mappings["G"] = {
   b = { "<cmd>GoBuild<cr>", "Build Go files" },
   r = { "<cmd>GoReferrers<cr>", "Go Referrers" },
   i = { "<cmd>GoImplements<cr>", "Go Implements" },
+  c = { "<cmd>GoCallers<cr>", "Go Callers" },
 }

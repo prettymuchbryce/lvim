@@ -25,3 +25,8 @@ lvim.builtin.terminal.active = true
 
 -- Specify languages allowed in markdown code blocks
 vim.g.markdown_fenced_languages = { "javascript", "rust", "typescript", "sh", "go" }
+
+
+-- Temporary until bufferline fixes this
+lvim.builtin.bufferline.options.indicator_icon = nil
+lvim.builtin.bufferline.options.indicator = { style = "icon", icon = "▎" }
