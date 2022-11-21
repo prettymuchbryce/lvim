@@ -10,6 +10,7 @@ NvimTree.config = function()
   lvim.builtin.nvimtree.setup.view.width = 40
   lvim.builtin.nvimtree.setup.git.ignore = false
   lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
+  lvim.builtin.nvimtree.setup.view.relativenumber = true
 
   -- Open nvimtree by default
   lvim.builtin.nvimtree.setup.open_on_setup_file = true
