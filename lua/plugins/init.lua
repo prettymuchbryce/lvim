@@ -55,7 +55,11 @@ lvim.plugins = {
     end,
   },
   {
-    "fatih/vim-go",
+    "ray-x/go.nvim",
+    requires = "ray-x/guihua.lua",
+    config = function()
+      require("gonvim").config()
+    end,
   },
   {
     "hashivim/vim-terraform",

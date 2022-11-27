@@ -14,12 +14,3 @@ lvim.builtin.which_key.mappings["N"] = {
   n = { "<cmd>NewNote<cr>", "Create a new note" },
   o = { "<cmd>OpenNotes<cr>", "Open notes" },
 }
-
--- Build Go Files
-lvim.builtin.which_key.mappings["G"] = {
-  name = "Go commands",
-  b = { "<cmd>GoBuild<cr>", "Build Go files" },
-  r = { "<cmd>GoReferrers<cr>", "Go Referrers" },
-  i = { "<cmd>GoImplements<cr>", "Go Implements" },
-  c = { "<cmd>GoCallers<cr>", "Go Callers" },
-}
