@@ -58,11 +58,14 @@ lvim.plugins = {
     "ray-x/go.nvim",
     requires = "ray-x/guihua.lua",
     config = function()
-      require("gonvim").config()
+      require("plugins.gonvim").config()
     end,
   },
   {
     "hashivim/vim-terraform",
+  },
+  {
+    "jghauser/follow-md-links.nvim",
   },
   --
   -- Git
@@ -75,16 +78,4 @@ lvim.plugins = {
     end,
     requires = "nvim-lua/plenary.nvim",
   },
-  --
-  -- Themes
-  --
-  {
-    "folke/tokyonight.nvim",
-    config = function()
-      require("themes.tokyonight").config()
-    end,
-  },
-  {
-    "jghauser/follow-md-links.nvim"
-  }
 }
