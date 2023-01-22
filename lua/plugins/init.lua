@@ -42,6 +42,9 @@ lvim.plugins = {
   {
     "tpope/vim-surround"
   },
+  {
+    "github/copilot.vim",
+  },
   --
   -- Language-specific plugins
   --

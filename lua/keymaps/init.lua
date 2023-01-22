@@ -75,3 +75,7 @@ lvim.builtin.nvimtree.setup.view.mappings.list = {
   { key = "q", cb = tree_cb("close") },
   { key = "g?", cb = tree_cb("toggle_help") },
 }
+
+-- Github Copilot
+vim.g.copilot_assume_mapped = true
+vim.api.nvim_set_keymap("i", "<S- >", 'copilot#Accept("<CR>")', { expr = true, silent = true })

@@ -4,9 +4,6 @@ lvim.format_on_save = true
 -- Lint buffer when buffer/file is saved
 lvim.lint_on_save = true
 
--- Theme
-lvim.colorscheme = "onedarker"
-
 -- Leader key
 lvim.leader = "space"
 
