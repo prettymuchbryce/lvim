@@ -11,6 +11,7 @@ lvim.builtin.which_key.mappings["t"] = {
 -- Which-key: +Notes
 lvim.builtin.which_key.mappings["N"] = {
   name = "+Notes",
+  t = { "<cmd>ToggleTimestampMode<cr>", "Toggle timestamp mode" },
   n = { "<cmd>NewNote<cr>", "Create a new note" },
   o = { "<cmd>OpenNotes<cr>", "Open notes" },
 }

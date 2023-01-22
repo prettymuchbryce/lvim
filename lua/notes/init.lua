@@ -10,7 +10,9 @@ date: %s
 
 ]]
 
-function open_notes()
+local timestamp_enabled = false
+
+function OpenNotes()
   -- Change directory to notes
   vim.cmd("cd " .. NOTE_DIR)
 
@@ -32,7 +34,7 @@ function open_notes()
   end
 end
 
-function new_note()
+function NewNote()
   local name = vim.fn.input("Note Name: ")
   local current_date = os.date("%Y-%m-%d")
   local filename = string.format("%s/%s-%s.md", NOTE_DIR, current_date, name)
@@ -69,32 +71,42 @@ function new_note()
   vim.cmd("startinsert")
 end
 
-function show_ui()
-  local Split = require("nui.split")
-  local event = require("nui.utils.autocmd").event
+function InsertTimestamp()
+  if timestamp_enabled and api.nvim_get_mode().mode == "i" then
+    local current_line = api.nvim_get_current_line()
+    -- Check length of current line
+    if #current_line == 1 then
+      local timestamp = tostring(os.date("%I:%M %p"))
 
-  local split = Split({
-    relative = "editor",
-    position = "bottom",
-    size = "20%",
-  })
+      -- Move cursor to beginning of line
+      api.nvim_command("normal! 0")
 
-  -- mount/open the component
-  split:mount()
+      -- Insert timestamp at the begining of the line and move cursor to end of the line
+      api.nvim_put({ timestamp }, "c", false, true)
 
-  -- unmount component when cursor leaves buffer
-  split:on(event.BufLeave, function()
-    split:unmount()
-  end)
+      -- Insert a separator in the form " – "
+      api.nvim_put({ " – " }, "c", false, true)
 
-  --  local items = ["x"]
-  local buf = api.nvim_win_get_buf(split.bufnr)
-  vim.api.nvim_buf_set_lines(buf, -1, -1, true, {"abc", "def"})
+      -- Start inserting at the very end of the current line using `nvim_call_function` with 'cursor'
+      local cursor_pos = api.nvim_win_get_cursor(0)
+      local line = cursor_pos[1]
+      local col = cursor_pos[2]
+      api.nvim_call_function('cursor', { line, col + 2 })
+    end
+  end
 end
 
+api.nvim_command("augroup timestamp")
+api.nvim_command("autocmd!")
+api.nvim_command("autocmd CursorMovedI * lua InsertTimestamp()")
+api.nvim_command("augroup END")
+
+function ToggleTimestampMode()
+  timestamp_enabled = not timestamp_enabled
+end
 
 vim.cmd [[
-  command! NewNote lua new_note()
-  command! OpenNotes lua open_notes()
-  command! Showy lua show_ui()
+  command! ToggleTimestampMode lua ToggleTimestampMode()
+  command! NewNote lua NewNote()
+  command! OpenNotes lua OpenNotes()
 ]]
