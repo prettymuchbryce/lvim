@@ -59,7 +59,9 @@ lvim.plugins = {
   },
   {
     "ray-x/go.nvim",
-    requires = "ray-x/guihua.lua",
+    dependencies = {
+      "ray-x/guihua.lua"
+    },
     config = function()
       require("plugins.gonvim").config()
     end,
@@ -76,9 +78,11 @@ lvim.plugins = {
   {
     "ruifm/gitlinker.nvim",
     event = "BufRead",
+    dependencies = {
+      "nvim-lua/plenary.nvim"
+    },
     config = function()
       require("plugins.gitlinker").config()
     end,
-    requires = "nvim-lua/plenary.nvim",
   },
 }

@@ -78,4 +78,4 @@ lvim.builtin.nvimtree.setup.view.mappings.list = {
 
 -- Github Copilot
 vim.g.copilot_assume_mapped = true
-vim.api.nvim_set_keymap("i", "<S- >", 'copilot#Accept("<CR>")', { expr = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-f>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
