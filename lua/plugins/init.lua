@@ -45,6 +45,9 @@ lvim.plugins = {
   {
     "github/copilot.vim",
   },
+  {
+    "MattesGroeger/vim-bookmarks",
+  },
   --
   -- Language-specific plugins
   --
