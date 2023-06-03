@@ -15,3 +15,9 @@ lvim.builtin.which_key.mappings["N"] = {
   n = { "<cmd>NewNote<cr>", "Create a new note" },
   o = { "<cmd>OpenNotes<cr>", "Open notes" },
 }
+
+-- Which-key: +Custom Commands
+lvim.builtin.which_key.mappings["C"] = {
+  name = "+Custom Commands",
+  s = { "<cmd>SnipRun<cr>", "Run Snippet" },
+}
