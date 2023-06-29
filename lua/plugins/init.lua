@@ -54,7 +54,7 @@ lvim.plugins = {
   {
     "michaelb/sniprun",
     -- FYI https://github.com/michaelb/sniprun/issues/180#issuecomment-1262698648
-    run = 'sh ./install.sh'
+    build = 'sh ./install.sh'
   },
   --
   -- Language-specific plugins
