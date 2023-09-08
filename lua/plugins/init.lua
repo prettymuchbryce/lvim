@@ -52,6 +52,34 @@ lvim.plugins = {
   -- Utils
   --
   {
+    "Bryley/neoai.nvim",
+    require = { "MunifTanjim/nui.nvim" },
+    cmd = {
+      "NeoAI",
+      "NeoAIOpen",
+      "NeoAIClose",
+      "NeoAIToggle",
+      "NeoAIContext",
+      "NeoAIContextOpen",
+      "NeoAIContextClose",
+      "NeoAIInject",
+      "NeoAIInjectCode",
+      "NeoAIInjectContext",
+      "NeoAIInjectContextCode",
+    },
+    config = function()
+      require("neoai").setup({
+        models = {
+          {
+            name = "openai",
+            model = "gpt-4",
+            params = nil
+          }
+        },
+      })
+    end,
+  },
+  {
     "michaelb/sniprun",
     -- FYI https://github.com/michaelb/sniprun/issues/180#issuecomment-1262698648
     build = 'sh ./install.sh'
@@ -82,6 +110,12 @@ lvim.plugins = {
   },
   {
     "jghauser/follow-md-links.nvim",
+  },
+  {
+    "Mofiqul/vscode.nvim",
+    config = function()
+      require("vscode").load('dark')
+    end,
   },
   --
   -- Git

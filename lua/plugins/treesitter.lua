@@ -17,7 +17,10 @@ Treesitter.config = function()
     "lua",
     "yaml",
     "make",
+    "markdown",
+    "markdown_inline"
   }
+
   lvim.builtin.treesitter.ignore_install = {
     "haskell",
     "rome",
@@ -26,7 +29,6 @@ Treesitter.config = function()
     "denols",
     "ansiblels"
   }
-  lvim.builtin.treesitter.highlight.enabled = true
 end
 
 return Treesitter
