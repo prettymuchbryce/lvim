@@ -11,6 +11,7 @@ NvimTree.config = function()
   lvim.builtin.nvimtree.setup.git.ignore = false
   lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
   lvim.builtin.nvimtree.setup.view.relativenumber = true
+  lvim.builtin.nvimtree.setup.filters.custom = {}
 
   -- Open nvimtree by default
   local function open_nvim_tree()
