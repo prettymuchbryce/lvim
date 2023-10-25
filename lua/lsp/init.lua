@@ -73,6 +73,12 @@ local formatters_table = {
     },
   },
   {
+    exe = "black",
+    filetypes = {
+      "python",
+    },
+  },
+  {
     exe = "eslint",
     filetypes = {
       "javascript",

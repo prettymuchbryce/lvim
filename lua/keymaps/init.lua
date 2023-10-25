@@ -106,8 +106,9 @@ end
 -- lvim.builtin.lir.icon = ""
 lvim.builtin.nvimtree.setup.on_attach = my_on_attach
 
+lvim.builtin.cmp.experimental.ghost_text = true
+
 -- Github Copilot
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_no_tab_map = true
--- vim.api.nvim_set_keymap("i", "<C-f>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
-vim.api.nvim_set_keymap("i", "<s-cr>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-o>", 'copilot#Accept("<C-o>")', { silent = true, expr = true })
